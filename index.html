@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f1e9">
+    <meta name="description" content="Monte seu pedido: escolha seu lanche, ingredientes extras e bebida.">
+    <title>Monte seu pedido | McDonald's</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="brand-watermark" aria-hidden="true"><span></span><span></span></div>
+    <header class="site-header">
+      <a class="wordmark" href="#inicio" aria-label="McDonald's, início">M<span aria-hidden="true">c</span></a>
+      <p>Monte seu pedido do seu jeito</p>
+      <button class="voice-button" type="button" aria-label="Ouvir leitura do site" aria-pressed="false" hidden>Ouvir página</button>
+    </header>
+
+    <main id="inicio">
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Bateu a fome?</p>
+        <h1 id="page-title">Seu pedido.<br><span>Seu jeito.</span></h1>
+        <div class="event-meta" aria-label="Etapas do pedido">
+          <p><span class="meta-label">01</span>Escolha o seu lanche</p>
+          <p><span class="meta-label">02</span>Adicione seus ingredientes</p>
+          <p><span class="meta-label">03</span>Complete com uma bebida</p>
+        </div>
+        <p class="intro-note">Do clássico de sempre à combinação só sua. Monte o pedido e deixe o resto com a gente.</p>
+        <div class="shape shape-one" aria-hidden="true"></div>
+        <div class="shape shape-two" aria-hidden="true"></div>
+      </section>
+
+      <section class="form-section" aria-labelledby="form-title">
+        <div class="form-heading">
+          <p class="eyebrow">Cardápio digital</p>
+          <h2 id="form-title">Monte seu pedido</h2>
+          <p>Os campos com <span aria-hidden="true">*</span> são obrigatórios.</p>
+        </div>
+
+        <form action="#" method="get">
+          <div class="form-grid">
+            <div class="field">
+              <label for="nome">Seu nome <span aria-hidden="true">*</span></label>
+              <input id="nome" name="nome" type="text" autocomplete="name" required aria-required="true">
+            </div>
+
+            <div class="field">
+              <label for="telefone">Celular para contato <span aria-hidden="true">*</span></label>
+              <input id="telefone" name="telefone" type="tel" autocomplete="tel" inputmode="tel" required aria-required="true">
+            </div>
+
+            <div class="field field-wide">
+              <label for="email">E-mail <span aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required aria-required="true" aria-describedby="email-error">
+              <span class="field-error" id="email-error" role="alert">Digite um e-mail válido para receber os detalhes do pedido.</span>
+            </div>
+
+            <div class="field">
+              <label for="lanche">Escolha seu lanche <span aria-hidden="true">*</span></label>
+              <select id="lanche" name="lanche" required aria-required="true">
+                <option value="">Selecione um lanche</option>
+                <option value="hamburguer">Hambúrguer clássico</option>
+                <option value="cheeseburger">Cheeseburger</option>
+                <option value="duplo">Duplo cheeseburger</option>
+                <option value="frango">Chicken burger</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="quantidade">Quantidade <span aria-hidden="true">*</span></label>
+              <input id="quantidade" name="quantidade" type="number" min="1" max="10" value="1" required aria-required="true">
+            </div>
+
+            <fieldset class="choice-group field-wide">
+              <legend>Ingredientes extras</legend>
+              <div class="choice-options">
+                <label class="choice" for="queijo">
+                  <input id="queijo" name="extras" type="checkbox" value="queijo">
+                  <span>Queijo extra</span>
+                </label>
+                <label class="choice" for="bacon">
+                  <input id="bacon" name="extras" type="checkbox" value="bacon">
+                  <span>Bacon crocante</span>
+                </label>
+                <label class="choice" for="picles">
+                  <input id="picles" name="extras" type="checkbox" value="picles">
+                  <span>Picles</span>
+                </label>
+                <label class="choice" for="cebola">
+                  <input id="cebola" name="extras" type="checkbox" value="cebola">
+                  <span>Cebola</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="choice-group field-wide">
+              <legend>Escolha sua bebida <span aria-hidden="true">*</span></legend>
+              <div class="choice-options">
+                <label class="choice" for="coca">
+                  <input id="coca" name="bebida" type="radio" value="coca-cola" required aria-required="true">
+                  <span>Coca-Cola</span>
+                </label>
+                <label class="choice" for="fanta">
+                  <input id="fanta" name="bebida" type="radio" value="fanta">
+                  <span>Fanta Laranja</span>
+                </label>
+                <label class="choice" for="sprite">
+                  <input id="sprite" name="bebida" type="radio" value="sprite">
+                  <span>Sprite</span>
+                </label>
+                <label class="choice" for="agua">
+                  <input id="agua" name="bebida" type="radio" value="agua">
+                  <span>Água</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="tamanho">Tamanho da bebida</label>
+              <select id="tamanho" name="tamanho">
+                <option value="medio">Média</option>
+                <option value="pequeno">Pequena</option>
+                <option value="grande">Grande</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="observacoes">Observações do pedido</label>
+              <input id="observacoes" name="observacoes" type="text">
+            </div>
+          </div>
+
+          <button type="submit">Enviar pedido <span aria-hidden="true">↗</span></button>
+          <p class="form-footnote">Confira suas escolhas antes de enviar o pedido.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>McDonald's · Monte seu pedido</span>
+      <span>Este formulário é uma demonstração escolar.</span>
+    </footer>
+    <script src="speech.js" defer></script>
+  </body>
+</html>
